@@ -1,0 +1,684 @@
+:root{
+    --primary-text: #CCCCCC;
+    --secondary-text: #888888;
+    --background: #111111;
+    --primary: #EDE9E3;
+    --secondary: #5B2C2C;
+    --accent: #B78C8C;
+}
+
+main {
+    margin-top: 5rem;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    color: var(--primary-text);
+}
+
+header {
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-center a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 0.2rem;
+}
+
+.navbar-center a:hover {
+    color: var(--primary);
+}
+
+.navbar-center a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary);
+    transition: all 0.2s ease-out;
+    transform: translateX(-50%);
+}
+
+.navbar-center a:hover::after {
+    width: 100%;
+}
+
+
+
+.hero {
+    position: relative;
+    background: url("/Images/heroBg.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, 0.7); 
+    z-index: 1;
+}
+
+.magazine-cover {
+    position: relative;
+    z-index: 2;
+}
+
+.magazine-cover {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header-text {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.magazine-title {
+    font-size: 12rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+    color: var(--primary-text);
+    font-size: 1.2rem;
+}
+
+.locations span {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: -1.5rem;
+}
+
+.cover-image {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: -20rem auto;
+    overflow: hidden;
+}
+
+.cover-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cover-text-left {
+    position: absolute;
+    left: 2rem;
+    bottom: 25%;
+    text-align: left;
+}
+
+.cover-text-right {
+    position: absolute;
+    right: 2rem;
+    bottom: 25%;
+    text-align: right;
+}
+
+.edition-text {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary);
+    margin-bottom: -1rem;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    margin-top: 1rem;
+}
+
+.fashion-tag {
+    font-size: 1.8rem;
+    color: var(--accent);
+    line-height: 1.2;
+    margin-bottom: -1.5rem;
+}
+
+.cover-text-right {
+    position: absolute;
+    right: 2rem;
+    bottom: 35%;  /* Changed from 25% to move up */
+    text-align: right;
+}
+
+.fashion-year {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.season-text {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+}
+
+.collection-text {
+    font-size: 1.8rem;
+    color: var(--primary-text);
+    margin-bottom: 1rem;
+}
+
+.style-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: -2rem;
+}
+
+.qr-section {
+    position: absolute;
+    bottom: 15%; 
+    right: 2rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.qr-code img {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+.subtitle {
+    margin-top: -1rem;
+}
+.subtitle a {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+.subtitle a:hover {
+    color: var(--primary);
+}
+
+.cover-text-right {
+    position: absolute;
+    right: 2rem;
+    bottom: 35%;
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.rotated-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    margin-bottom: 8rem;
+}
+
+.fashion-year {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.season-text {
+    font-size: 2rem;
+    color: var(--accent);
+    margin: 0;
+}
+
+.collection-text {
+    font-size: 1.8rem;
+    color: var(--primary-text);
+    margin: 0;
+}
+
+.style-text, .fashion-tag {
+    margin-right: -7rem;
+}
+
+.skills {
+    padding: 5rem 2rem;
+    background-color: var(--background);
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 4rem;
+    letter-spacing: 2px;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-image img {
+    transform: scale(1.1);
+}
+
+.skill-card h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 1.5rem 1rem 0.5rem;
+}
+
+.skill-card p {
+    color: var(--secondary-text);
+    font-size: 1rem;
+    margin: 0 1rem 1.5rem;
+    line-height: 1.4;
+}
+
+.about {
+    padding: 8rem 2rem;
+    background-color: #333;
+    position: relative;
+    z-index: 2;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    padding-right: 2rem;
+}
+
+.about-description {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.achievement-item {
+    text-align: center;
+}
+
+.achievement-item .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-item .label {
+    color: var(--primary-text);
+    font-size: 0.9rem;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-item:hover {
+    color: var(--accent);
+}
+
+
+.footer-right {
+    padding-top: 0.5rem;
+    margin-right: 10rem;
+
+}
+
+
+.footer-nav a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--primary);
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: block;
+    text-align: right;
+}
+
+.footer-nav a:hover {
+    color: var(--accent);
+}
+
+
+.footer {
+    padding: 3rem 2rem;
+    margin-top: auto;
+    background-color: var(--secondary);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 10rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.footer-name {
+    color: var(--primary);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-item img {
+    width: 24px;  
+    height: 24px;
+    filter: none;  
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover img {
+    filter: none;  
+    transform: scale(1.1);  
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;  
+    height: 45px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links img {
+    width: 42px;  
+    height: 42px;  
+    filter: none;  
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.gallery {
+    padding: 5rem 2rem;
+    background-color: var(--background);
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    height: auto;  
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;  
+    display: block;  
+    object-fit: contain; 
+    max-height: 80vh;
+    top: 100%;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--primary);
+}
+
+.slide-caption h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.slide-caption h4 {
+    font-size: 1.4rem;
+    margin-top: 0rem;
+    color: var(--accent);
+}
+
+.slide-caption p {
+    font-size: 1.1rem;
+    color: var(--primary-text);
+    margin-top: -0.5rem;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--primary);
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 1rem;
+}
+
+.next-btn {
+    right: 1rem;
+}
+
+.slider-btn:hover {
+    background: var(--accent);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--accent);
+}
